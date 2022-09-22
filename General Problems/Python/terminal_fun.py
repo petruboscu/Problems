@@ -48,7 +48,7 @@ class FileCommand(Command):
                 if os.path.isfile(filename):
                     print(f'{filename} already exists')
                 else:
-                    open(filename, 'w')
+                    os.system(f'type nul > {filename}')
                     print(f'{filename} was created')
             case ['open', filename]:
                 if os.path.isfile(filename):
@@ -93,6 +93,8 @@ class CommandExecutor:
             self.generator.generate_general_command(text).run()
         elif text.count(' ') == 1:
             self.generator.generate_file_command(text).run()
+        else:
+            print(f'{text} was no implemented yet')
 
 
 if __name__ == '__main__':
