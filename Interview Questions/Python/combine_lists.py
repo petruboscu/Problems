@@ -1,3 +1,6 @@
+from itertools import zip_longest
+
+
 def combine_lists(lists: list) -> list:
     combined_list = []
     combined_list_element = []
@@ -22,7 +25,13 @@ if __name__ == '__main__':
     third_list = ['!', '@', '#', "$", '%', '^', '&', '*', '(', ')', '_']
     forth_list = ['-', '+', ':', 'X', '<', '>', '=', '<=', '>=']
 
-    list_to_be_combined = [first_list, second_list, third_list, forth_list]
+    lists_to_be_combined = [first_list, second_list, third_list, forth_list]
 
-    for element in combine_lists(list_to_be_combined):
+    for element in combine_lists(lists_to_be_combined):
         print(element)
+
+    print()
+
+    # same behavior as combine_lists
+    for element in zip_longest(*lists_to_be_combined):
+        print(list(element))
