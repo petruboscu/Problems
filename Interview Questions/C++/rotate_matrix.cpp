@@ -25,7 +25,7 @@ int** read_matrix(string path, int& rows, int& collumns){
   ifstream file;
   file.open(path);
 
-  file >> rows >> collumns;
+  file > > rows > > collumns;
 
   int **matrix = (int **)malloc(rows * sizeof(int*));
   for(int index = 0; index < rows; index++)
@@ -33,7 +33,7 @@ int** read_matrix(string path, int& rows, int& collumns){
 
   for(int row_index = 0; row_index < rows; row_index++)
     for(int collumn_index = 0; collumn_index < collumns; collumn_index++)
-      file >> matrix[row_index][collumn_index];
+      file > > matrix[row_index][collumn_index];
 
   return matrix;
 }

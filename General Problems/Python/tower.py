@@ -7,8 +7,7 @@ class Rectangle:
 
 class TowerBlock:
     def __init__(self, rectangle: Rectangle, color: str):
-        self.rectangle = rectangle
-        self.color = color
+        self.rectangle = rectangle        self.color = color
 
     def __str__(self):
         return f'Tower Block: Rectangle({self.rectangle.length}, {self.rectangle.width}) {self.color}'

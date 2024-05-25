@@ -29,13 +29,13 @@ vector<int> read_integers(string vector_name)
     string input;
     int integer;
     char separator;
-    cin >> input;
+    cin > > input;
     stringstream str_stream(input);
     vector<int> integers;
-    while (str_stream >> integer)
+    while (str_stream > > integer)
     {
         integers.push_back(integer);
-        str_stream >> separator;
+        str_stream > > separator;
     }
     return integers;
 }

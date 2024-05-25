@@ -10,7 +10,7 @@ int main()
   int maxWeight, objectCount;
   int backpacks[100];
 
-  // cin >> maxWeight >> objectCount;// read the max Weight and the number of objects
+  // cin > > maxWeight > > objectCount;// read the max Weight and the number of objects
   maxWeight = 6;
   objectCount = 5;
   int objects[6] = {3, 2, 6, 4, 3};
@@ -27,7 +27,7 @@ int main()
   for(int oCount = 0; oCount < objectCount; oCount++)
     {
         added = false;
-        // cin >> objectWeight;
+        // cin > > objectWeight;
         objectWeight = sortedObjects[oCount];
 
         // Check if we can put the object in our previous backpacks
